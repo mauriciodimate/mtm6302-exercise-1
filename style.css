@@ -1,0 +1,39 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+
+
+}
+
+
+body{
+   
+   background-color: coral;
+}
+p{
+   font-size: 5rem;
+   cursor: pointer;
+   transition: all 200ms;
+ 
+}
+p:hover{
+   transform: scale(1.1);
+}
+
+.emoji-container{
+   width:600px;
+   height: 800px;
+   margin: auto;
+}
+.emoji-list{
+   width:100%;
+   display: flex;
+   flex-wrap: wrap;
+   box-shadow: 0 2px 30px -5px;
+   overflow: auto;
+   border-radius: 4px;
+   background-color: rgb(202, 201, 200);
+   padding: 30px;
+}
