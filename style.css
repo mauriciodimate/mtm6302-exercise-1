@@ -3,37 +3,95 @@
    padding: 0;
    box-sizing: border-box;
 
-
-
 }
-
-
+/**this is for desktop**/
 body{
-   
    background-color: coral;
 }
-p{
-   font-size: 5rem;
-   cursor: pointer;
-   transition: all 200ms;
- 
+h1{
+   font-family: 'Courier New', Courier, monospace;
+   color: brown;
+   padding: 40px;
+   margin: auto 0;
 }
-p:hover{
-   transform: scale(1.1);
+/**the big container**/
+.flex{
+   display: grid;
+   grid-template-columns: auto auto auto;
+   justify-content: space-evenly;
+   grid-template-rows: 80px auto 80px; 
+   column-gap: 10px;
+   row-gap: 15px;
+   background-color: #92ec8a;
+   padding: 10px;
 }
+.emoji{
+    font-size: 40px;
+      align-content: center;
+      width: 30px;
+      height: 60px;
+      padding: 0px;
+      margin: 0 0 0;
+      text-align: center;
+}
+/*for tablet*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+   .flex{
+      display: flex;
+      flex-wrap:wrap;
+      grid-template-columns: auto auto auto;
+      background-color: #86ebbc;
+      padding: 4px;
+      padding-top:90px ;
+   }   
+   .code{
+      padding-top: 100px;
+      margin: auto 0;
+      width: 90px;
+   }
+   .emoji{
 
-.emoji-container{
-   width:600px;
-   height: 800px;
-   margin: auto;
+      border: 5px solid;
+      padding: 0px;
+    font-size:35px;
+      width: 0px;
+      height: 0px;
 }
-.emoji-list{
-   width:100%;
-   display: flex;
-   flex-wrap: wrap;
-   box-shadow: 0 2px 30px -5px;
-   overflow: auto;
-   border-radius: 4px;
-   background-color: rgb(202, 201, 200);
-   padding: 30px;
-}
+   
+ }
+
+/**for iphone*/
+
+@media only screen and (max-width: 768px) {
+   body {
+     background-color: rgb(8, 14, 15);
+   }
+   .flex{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: #1d5283;
+      padding: 10px;
+      padding-top:90px ;
+   }
+   .emoji{
+
+         border: 5px solid rgb(89, 89, 189);
+         padding: 0px;
+         text-align: left;
+       font-size:35px;
+         width: 60px;
+         height: 60px;
+         margin:  0 50px;
+   }
+   .code{
+      padding: 5px;
+      text-align: left;
+    font-size:30px;
+      width: 20px;
+      height: 60px;
+      margin:  0 40px;
+   }
+/*issue with one number*/
+
+ }
+
